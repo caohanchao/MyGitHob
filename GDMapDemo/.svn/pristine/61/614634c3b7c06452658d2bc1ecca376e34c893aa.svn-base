@@ -1,0 +1,24 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'GDMapDemo' do
+  # Uncomment this line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for GDMapDemo
+    pod 'AFNetworking'
+	pod 'AMap3DMap' #3D地图SDK(2D地图和3D地图不能同时使用)
+	pod 'AMapSearch' #搜索服务SDK
+    pod 'AMapNavi' #导航SDK
+    
+  target 'GDMapDemoTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'GDMapDemoUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

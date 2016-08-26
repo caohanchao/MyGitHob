@@ -1,0 +1,29 @@
+//
+//  PrefixHeader.pch
+//  GDMapDemo
+//
+//  Created by caohanchao on 16/8/12.
+//  Copyright © 2016年 caohanchao. All rights reserved.
+//
+
+#ifdef __OBJC__
+
+
+#import <UIKit/UIKit.h>
+
+
+#import "JPUSHService.h"
+
+#pragma mark - 高德地图APIKey
+#define  APIKey @"d651677f721255cf835cf18f966d2b55"
+
+
+#pragma mark - 极光推送APPKey
+/*  配置极光推送的参数  */
+/*                   */
+static NSString *appKey = @"68f12f9d000d3949c32e9ee4";
+static NSString *channel = @"Publish channel";
+static BOOL isProduction = false;
+
+
+#endif /* PrefixHeader_pch */
