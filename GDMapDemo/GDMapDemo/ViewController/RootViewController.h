@@ -10,7 +10,7 @@
 #import <MAMapKit/MAMapKit.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <AMapSearchKit/AMapSearchKit.h>
-
+//#import <AMapLocationKit/AMapLocationKit.h>
 #import <UIKit/UIKit.h>
 
 //分区枚举
@@ -35,7 +35,10 @@ typedef enum
     
 }
 
+
+
 -(void)presentAlert:(NSString *)message;
+
 
 
 

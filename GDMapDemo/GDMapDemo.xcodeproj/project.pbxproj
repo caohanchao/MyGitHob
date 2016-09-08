@@ -65,6 +65,7 @@
 		EAF606051D5B3FF300E6A8F2 /* POIAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF605F71D5B3FF300E6A8F2 /* POIAnnotation.m */; };
 		EAF606061D5B3FF300E6A8F2 /* ReGeocodeAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF605F91D5B3FF300E6A8F2 /* ReGeocodeAnnotation.m */; };
 		EAF606091D5B408000E6A8F2 /* CommonUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF606081D5B408000E6A8F2 /* CommonUtility.m */; };
+		EAF675F11D7FF3E900A44713 /* MonitoringRegionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF675F01D7FF3E900A44713 /* MonitoringRegionViewController.m */; };
 		EAFED3611D557868005D2007 /* location_no@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAFED35F1D557868005D2007 /* location_no@2x.png */; };
 		EAFED3621D557868005D2007 /* location_yes@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAFED3601D557868005D2007 /* location_yes@2x.png */; };
 		EAFED3641D5589AD005D2007 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = EAFED3631D5589AD005D2007 /* location.png */; };
@@ -195,6 +196,8 @@
 		EAF605F91D5B3FF300E6A8F2 /* ReGeocodeAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReGeocodeAnnotation.m; sourceTree = "<group>"; };
 		EAF606071D5B408000E6A8F2 /* CommonUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtility.h; sourceTree = "<group>"; };
 		EAF606081D5B408000E6A8F2 /* CommonUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtility.m; sourceTree = "<group>"; };
+		EAF675EF1D7FF3E900A44713 /* MonitoringRegionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonitoringRegionViewController.h; sourceTree = "<group>"; };
+		EAF675F01D7FF3E900A44713 /* MonitoringRegionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitoringRegionViewController.m; sourceTree = "<group>"; };
 		EAFED35F1D557868005D2007 /* location_no@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location_no@2x.png"; sourceTree = "<group>"; };
 		EAFED3601D557868005D2007 /* location_yes@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location_yes@2x.png"; sourceTree = "<group>"; };
 		EAFED3631D5589AD005D2007 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
@@ -287,6 +290,8 @@
 				EA08C71F1D5F6F470013D759 /* NavViewController.m */,
 				EA08C70A1D5F6F2B0013D759 /* QuickStartAnnotationView.h */,
 				EA08C70B1D5F6F2B0013D759 /* QuickStartAnnotationView.m */,
+				EAF675EF1D7FF3E900A44713 /* MonitoringRegionViewController.h */,
+				EAF675F01D7FF3E900A44713 /* MonitoringRegionViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -828,6 +833,7 @@
 				EA08C73C1D5F702A0013D759 /* DriveNaviViewController.m in Sources */,
 				EAF606061D5B3FF300E6A8F2 /* ReGeocodeAnnotation.m in Sources */,
 				EAF605FD1D5B3FF300E6A8F2 /* CloudPOIAnnotation.m in Sources */,
+				EAF675F11D7FF3E900A44713 /* MonitoringRegionViewController.m in Sources */,
 				EA08C7201D5F6F470013D759 /* NavViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -964,7 +970,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = /Users/chc/Desktop/GitHubDemo/GitHubDemo/GDMapDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = GDMapDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -984,7 +990,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = /Users/chc/Desktop/GitHubDemo/GitHubDemo/GDMapDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = GDMapDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (

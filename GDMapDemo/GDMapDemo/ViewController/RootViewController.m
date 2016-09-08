@@ -14,7 +14,7 @@
 #import "RouteSearchViewController.h"
 #import "WeatherSearchViewController.h"
 #import "NavViewController.h"
-
+#import "MonitoringRegionViewController.h"
 
 
 @interface RootViewController ()<MAMapViewDelegate,AMapSearchDelegate,UITableViewDelegate,UITableViewDataSource>
@@ -24,6 +24,8 @@
     int _notificationCount;
     
 }
+
+
 @property (nonatomic) CGFloat level;
 @property(nonatomic,copy)NSArray *dataArray;
 @end
@@ -57,6 +59,9 @@ UIButton * _overlayButton;
 UIButton * _moreButton;
 UIButton * _bigButton;
 UIButton * _smallButton;
+UIButton * _fenceButton;
+
+
 
 
 -(void)initNav
@@ -206,6 +211,18 @@ UIButton * _smallButton;
     ;
     [_mapView addSubview:_smallButton];
     
+    
+    _fenceButton =[UIButton buttonWithType: UIButtonTypeSystem];
+    _fenceButton.frame =CGRectMake(CGRectGetMaxX(_mapView.bounds)-60, CGRectGetMaxY(_mapView.bounds)-320, 40, 40);
+    _fenceButton.backgroundColor = [UIColor colorWithRed:0.80 green:0.93 blue:0.91 alpha:1.00];
+    _fenceButton.layer.cornerRadius = 5;
+    [_fenceButton setTitle:@"围栏" forState:UIControlStateNormal];
+    [_fenceButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    _fenceButton.titleLabel.font = [UIFont systemFontOfSize:10];
+    [_fenceButton addTarget:self action:@selector(showFenceAction)
+           forControlEvents:UIControlEventTouchUpInside];
+    ;
+    [_mapView addSubview:_fenceButton];
 }
 
 - (void)initSearch
@@ -343,6 +360,7 @@ MACircle *circle;
     
 }
 
+
 //交通路况
 -(void)showTrafficAction
 {
@@ -469,6 +487,16 @@ MAHeatMapTileOverlay  *_heatMapTileOverlay;
     
     
 }
+//地理围栏
+-(void)showFenceAction
+{
+    MonitoringRegionViewController *MonVC =[[MonitoringRegionViewController alloc]init];
+    
+    [self.navigationController pushViewController:MonVC animated:YES];
+
+}
+
+
 
 #pragma mark -MAMapViewDelegate
 
@@ -495,7 +523,7 @@ MAHeatMapTileOverlay  *_heatMapTileOverlay;
         return render;
     }
     
-    
+
     return nil;
     
 }
@@ -705,8 +733,8 @@ MAHeatMapTileOverlay  *_heatMapTileOverlay;
     
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden =YES;
-    [self initMapView];
     
+    [self initMapView];
     [self initSearch];
     [self initControls];
     //    self.navigationBarHidden = YES;
@@ -715,8 +743,6 @@ MAHeatMapTileOverlay  *_heatMapTileOverlay;
 -(void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    
-    
     _search.delegate =nil;
     _search =nil;
     
